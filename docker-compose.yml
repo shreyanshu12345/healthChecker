@@ -1,6 +1,7 @@
 services:
   backend:
     build: ./backend
+    image: pes1ug22cs578/healthchecker-backend:latest
     env_file:
       - ./backend/.env
     ports:
@@ -9,6 +10,7 @@ services:
 
   frontend:
     build: ./frontend
+    image: pes1ug22cs578/healthchecker-frontend:latest
     ports:
       - "80:80"
     depends_on:
