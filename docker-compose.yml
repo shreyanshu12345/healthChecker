@@ -15,7 +15,7 @@ jobs:
 
       - name: Create backend .env
         env:
-          MONGO_URI: ${{ secrets.MONGO_URI }}
+          MONGO_URI: '${{ secrets.MONGO_URI }}'
         run: |
           echo "MONGO_URI=$MONGO_URI" > backend/.env
 
