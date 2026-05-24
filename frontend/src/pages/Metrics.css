@@ -38,7 +38,6 @@
 
 .btn-refresh:hover { border-color: #4f7df3; color: #4f7df3; }
 
-/* ── Stat cards ── */
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -85,7 +84,6 @@
   color: #475569;
 }
 
-/* ── Per-URL table ── */
 .url-table-wrap {
   overflow-x: auto;
   border-radius: 10px;
@@ -183,7 +181,6 @@
 .uptime-pct.yellow { color: #facc15; }
 .uptime-pct.red { color: #f87171; }
 
-/* ── Timeline chart ── */
 .timeline-section {
   background: #1e2330;
   border: 1px solid #2d3548;
@@ -258,7 +255,6 @@
   border-radius: 1px;
 }
 
-/* ── Skeletons ── */
 .metrics-loading {
   display: flex;
   flex-direction: column;

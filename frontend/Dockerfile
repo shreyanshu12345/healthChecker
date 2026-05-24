@@ -8,7 +8,6 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# ── Serve ──────────────────────────────────────────────
 FROM nginx:alpine
 
 COPY --from=builder /app/dist /usr/share/nginx/html

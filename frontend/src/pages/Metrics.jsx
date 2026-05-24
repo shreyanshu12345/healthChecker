@@ -5,7 +5,6 @@ import {
 } from 'recharts'
 import './Metrics.css'
 
-// ── Lightweight SVG sparkline ─────────────────────────────────────────────────
 function Sparkline({ points }) {
   const values = points.map(p => p.l).filter(v => v != null)
   if (values.length < 2) return <span className="spark-empty">—</span>
@@ -39,7 +38,6 @@ function Sparkline({ points }) {
   )
 }
 
-// ── Stat card ─────────────────────────────────────────────────────────────────
 function StatCard({ label, value, sub, accent }) {
   return (
     <div className="stat-card">
@@ -50,7 +48,6 @@ function StatCard({ label, value, sub, accent }) {
   )
 }
 
-// ── Custom tooltip for timeline chart ────────────────────────────────────────
 function TimelineTooltip({ active, payload }) {
   if (!active || !payload?.length) return null
   const d = payload[0].payload
@@ -64,7 +61,6 @@ function TimelineTooltip({ active, payload }) {
   )
 }
 
-// ── Main page ─────────────────────────────────────────────────────────────────
 export default function Metrics() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
@@ -131,7 +127,6 @@ export default function Metrics() {
   return (
     <div className="page-metrics">
 
-      {/* ── Header ── */}
       <div className="metrics-header">
         <div>
           <h2>Metrics</h2>
@@ -140,7 +135,6 @@ export default function Metrics() {
         <button className="btn-refresh" onClick={fetchMetrics}>Refresh</button>
       </div>
 
-      {/* ── Summary cards ── */}
       <div className="stat-grid">
         <StatCard label="Total Checks" value={summary.total_checks.toLocaleString()} />
         <StatCard
@@ -209,7 +203,6 @@ export default function Metrics() {
         </div>
       )}
 
-      {/* ── Timeline chart ── */}
       {selectedUrl && (
         <div className="timeline-section">
           <div className="timeline-header">
